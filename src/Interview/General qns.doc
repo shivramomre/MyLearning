@@ -1,0 +1,13 @@
+1) What is Difference Between HTTP and HTTPS Protocol
+
+Before knowing the difference between these two protocols you should know how browser works. Here is a great illustration by Vladstudio that helps you to understand the functionality of browser.
+Hypertext Transfer Protocol (HTTP) is a protocol used in networking. When you type any web address in your web browser, your browser acts as a client, and the computer having the requested information acts as a server. When client requests for any information from the server, it uses HTTP protocol to do so. The server responds back to the client after the request completes. The response comes in the form of web page which you see just after typing the web address and press “Enter”.
+
+Hypertext Transfer Protocol Secure (HTTPS) is a combination of two different protocols. It is more secure way to access the web. It is combination of Hypertext Transfer Protocol (HTTPS) and SSL/TLS protocol. It is more secure way to sending request to server from a client, also the communication is purely encrypted which means no one can know what you are looking for. This kind of communication is used for accessing those websites where security is required. Banking websites, payment gateway, emails (Gmail offers HTTPS by default in Chrome browser), and corporate sector websites are some great examples where HTTPS protocols are used.
+For HTTPS connection, public key trusted and signed certificate is required for the server. These certificate comes either free or it costs few dollars depends on the signing authority. There is one other method for distributing certificates. Site admin creates certificates and loads in the browser of users. Now when user requests information to the web server, his identity can be verified easily.
+
+2) What are the security implications of an expired SSL certificate? For example if an SSL certificate from a trusted CA has expired will the communication channel continue to remain secure?
+
+The communication is still encrypted, but the trust mechanism is undermined. But usually the most important factor is that users will get ugly warning messages about the security of your site. Most won't make informed judgements about the integrity of the connection, they'll just go buy stuff.
+See some good ans
+

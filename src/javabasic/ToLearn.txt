@@ -1,0 +1,14 @@
+hashcode and equals
+https://www.youtube.com/watch?v=fAlRR2p9Le0
+https://www.youtube.com/watch?v=od8legmhJBk
+
+
+Comparator interface compare()
+https://www.youtube.com/watch?v=QYvUmIYgsiA&list=PLB841C370FAFB8EC7&index=7
+
+Comparable interface compareTo()
+https://www.youtube.com/watch?v=OlMw3ecL1ow&list=PLB841C370FAFB8EC7&index=8
+
+Inner class : http://javabeginnerstutorial.com/core-java-tutorial/inner-class/
+Final :http://www.javatpoint.com/final-keyword
+Static : http://www.java-samples.com/showtutorial.php?tutorialid=157

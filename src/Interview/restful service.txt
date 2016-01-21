@@ -1,0 +1,4 @@
+POST	Create	201 (Created) neither safe nor idempotent
+GET	Read	200 (OK) safe and idempotent
+PUT	Update	neither safe nor idempotent
+DELETE	Delete	neither safe nor idempotent

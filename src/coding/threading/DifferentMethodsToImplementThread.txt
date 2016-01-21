@@ -1,0 +1,103 @@
+The first method of creating a thread is to simply extend from the Thread class. 
+Do this only if the class you need executed as a thread does not ever need to be extended from another class.
+The Thread class is defined in the package java.lang, which needs to be imported so that our classes are aware of its definition.
+
+import java.lang.*;
+public class Counter extends Thread 
+{                      
+        public void run()                       
+        {              
+        ....            
+        }
+}
+
+
+The same class can be created by implementing Runnable:
+
+import java.lang.*;
+public class Counter implements Runnable
+{
+        Thread T;                        
+        public void run()                       
+        {                              
+        ....            
+        }
+}
+
+Here, the abstract run() method is defined in the Runnable interface and is being implemented.
+Note that we have an instance of the Thread class as a variable of the Counter class. The only difference between the two methods
+is that by implementing Runnable, there is greater flexibility in the creation of the class Counter.
+In the above example, the opportunity still exists to extend the Counter class, if needed. 
+The majority of classes created that need to be run as a thread will implement Runnable since they probably are 
+extending some other functionality from another class.
+
+Do not think that the Runnable interface is doing any real work when the thread is being executed.
+It is merely a class created to give an idea on the design of the Thread class. 
+In fact, it is very small containing only one abstract method. Here is the definition of the Runnable interface directly 
+from the Java source:
+
+package java.lang;
+public interface Runnable {    
+        public abstract void run();
+}
+
+Thread Priorities:
+Every Java thread has a priority that helps the operating system determine the order in which threads are scheduled.
+
+Java thread priorities are in the range between MIN_PRIORITY (a constant of 1) and MAX_PRIORITY (a constant of 10).
+By default, every thread is given priority NORM_PRIORITY (a constant of 5).
+
+Threads with higher priority are more important to a program and should be allocated processor time before lower-priority threads.
+However, thread priorities cannot guarantee the order in which threads execute and very much platform dependent.
+
+
+
+Thread Methods:
+Following is the list of important methods available in the Thread class.
+
+SN	Methods with Description
+public void start()
+Starts the thread in a separate path of execution, then invokes the run() method on this Thread object.
+
+public void run()
+If this Thread object was instantiated using a separate Runnable target, the run() method is invoked on that Runnable object.
+
+public final void setName(String name)
+Changes the name of the Thread object. There is also a getName() method for retrieving the name.
+
+public final void setPriority(int priority)
+Sets the priority of this Thread object. The possible values are between 1 and 10.
+
+public final void setDaemon(boolean on)
+A parameter of true denotes this Thread as a daemon thread.
+
+public final void join(long millisec)
+The current thread invokes this method on a second thread, causing the current thread to block until the second thread terminates or the specified number of milliseconds passes.
+
+public void interrupt()
+Interrupts this thread, causing it to continue execution if it was blocked for any reason.
+
+public final boolean isAlive()
+Returns true if the thread is alive, which is any time after the thread has been started but before it runs to completion.
+
+
+
+
+The previous methods are invoked on a particular Thread object. The following methods in the Thread class are static. 
+Invoking one of the static methods performs the operation on the currently running thread.
+
+SN	Methods with Description
+public static void yield()
+Causes the currently running thread to yield to any other threads of the same priority that are waiting to be scheduled.
+
+public static void sleep(long millisec)
+Causes the currently running thread to block for at least the specified number of milliseconds.
+
+public static boolean holdsLock(Object x)
+Returns true if the current thread holds the lock on the given Object.
+
+public static Thread currentThread()
+Returns a reference to the currently running thread, which is the thread that invokes this method.
+
+public static void dumpStack()
+Prints the stack trace for the currently running thread, which is useful when debugging a multithreaded application

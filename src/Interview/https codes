@@ -1,0 +1,36 @@
+2xx Success
+
+200 OK
+Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request, the response will contain an entity describing or containing the result of the action.[10]
+201 Created
+The request has been fulfilled and resulted in a new resource being created.[11]
+204 No Content
+The server successfully processed the request, but is not returning any content.[14]
+
+3xx Redirection
+300 Multiple Choices
+Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.[22]
+301 Moved Permanently
+This and all future requests should be directed to the given URI.[23]
+
+
+4xx Client Error[edit]
+400 Bad Request
+"The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."[36]
+
+401 Unauthorized (RFC 7235)
+Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource. See Basic access authentication and Digest access authentication.[37] 401 semantically means "unauthenticated", i.e. "you don't have necessary credentials".
+403 Forbidden
+The request was a valid request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference.[39] 403 error semantically means "unauthorized", i.e. "you don't have necessary permissions for the resource".
+404 Not Found
+The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.[40]
+415 Unsupported Media Type
+The request entity has a media type which the server or resource does not support. For example, the client uploads an image as image/svg+xml, but the server requires that images use a different format.
+
+5xx Server Error
+500 Internal Server Error
+A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.[78]
+502 Bad Gateway
+The server was acting as a gateway or proxy and received an invalid response from the upstream server.[80]
+503 Service Unavailable
+The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.[81]
